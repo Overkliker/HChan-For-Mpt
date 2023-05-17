@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from perenos_hchan.views import index, profile, collection, brother, manga
 
 urlpatterns = [
@@ -24,6 +24,8 @@ urlpatterns = [
     path("profile", profile),
     path("collection", collection),
     path("brother", brother),
-    path("manga", manga)
+    path("manga", manga),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('home/', include('perenos_hchan.urls')),
 
 ]
