@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/main_style.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1">
+        <img class="img1" src="https://cdn-icons-png.flaticon.com/512/4943/4943305.png" alt="">
+        <div class="links">
+            <a href="profile" class="l1">
+                Профиль</a>
+            <a href="collection" class="l1">
+                Коллекция</a>
+        </div>
+    </header>
+    <div class="divpage">
+        <div class="links2">
+            <p class="header2">[ + ] Абсолютно не юзласная инфа</p>
+            <a class="block1" href="">Как переводить мангу, или пособие по безработице</a>
+            <a class="block1" href="">Лучший сайт с мангой</a>
+        </div>
+
+        <div class="tags">
+            <p class="header2">Тэги [+]</p>
+            <a href="https://mangalib.me/true-education?section=info">Набить лицо</a><br/>
+            <a href="https://mangalib.me/hanma-baki?section=info">Поймать мотивацию за яйца</a><br/>
+            <a href="https://mangalib.me/guran-buru?section=info">Помереть от аклкоголя</a>
+        </div>
+    </div>
+
+    <div >
+        {% for i in cards %}
+        <div class="manga">
+            <a href="brother"><img class="imgManga" src="{{ i.img }}"/>
+            <p>{{ i.title }}</p></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+</body>
+</html>

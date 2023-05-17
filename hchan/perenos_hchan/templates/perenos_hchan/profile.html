@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/profile_style.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1">
+        <img class="img1" src="https://cdn-icons-png.flaticon.com/512/4943/4943305.png" alt="">
+        <div class="links">
+            <a href="profile" class="l1">
+                Профиль</a>
+            <a href="collection" class="l1">
+                Коллекция</a>
+        </div>
+    </header>
+    <div>
+        <img class="avatar" src="{{ user.avatar }}" alt="">
+        <p class="name">{{ user.name }}</p>
+    </div>
+</body>
+</html>

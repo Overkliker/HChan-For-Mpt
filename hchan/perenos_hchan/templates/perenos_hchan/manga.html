@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/manga_style.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img class="start" src="{{ first.file_name }}">
+
+        {% for i in pages %}
+        <img class="img1" src="{{ i.file_name }}">
+        {% endfor %}
+    </div>
+</body>
+</html>
